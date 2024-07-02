@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Fauzi Hizbullah - Web Dev</title>
-    <link rel="icon" type="image/x-icon" href="images\favicon\favicon.ico">
+    <title>Kaca Mobil Panggilan Se-Jabodetabek</title>
+    <!--<link rel="icon" type="image/x-icon" href="images\favicon\favicon.ico">-->
 
     <link rel="stylesheet" href="style.css">
-
-    <title>Kaca Mobil Panggilan</title>
 
     <!-- Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,14 +16,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-   
-    <!-- Global site tag (gtag.js) - Google Ads: YOUR_CONVERSION_ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-826566577"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-CONVERSION_ID');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-826566577');
     </script>
 </head>
 <body>
@@ -37,7 +35,7 @@
         <div id="hero">
             <h1>Kaca Mobil Anda Pecah atau Retak?</h1>
             <h2>Segera panggil kami ke rumah anda!</h2>
-            <a href="https://wa.link/kkz0sx" target="_blank" id="cta"><img class="logo-wa" src="logo-wa.png" alt="logo whatsapp"><span id="cta-text">Panggil Kami!</span></a>
+            <a href="https://wa.link/kkz0sx" target="_blank" id="cta" onclick="gtag_report_conversion('https://wa.link/kkz0sx');"><img class="logo-wa" src="logo-wa.png" alt="logo whatsapp"><span id="cta-text">Panggil Kami!</span></a>
             <img class="hero-img" src="hero.jpeg" alt="teknisi kaca mobil sedang memasang sealer">
         </div>
         <div id="benefit">
@@ -49,7 +47,7 @@
                 <li>Pengerjaan Cepat dan Rapih.</li>
             </ul>
             <h3>Informasi Lebih Lanjut Hubungi Kami:</h3>
-            <a href="https://wa.link/kkz0sx" target="_blank" id="cta2"><img class="logo-wa" src="logo-wa.png" alt="logo whatsapp"><span>Silahkan Chat via Whatsapp!</span></a>
+            <a href="https://wa.link/kkz0sx" target="_blank" id="cta2" onclick="gtag_report_conversion('https://wa.link/kkz0sx');"><img class="logo-wa" src="logo-wa.png" alt="logo whatsapp"><span>Silahkan Chat via Whatsapp!</span></a>
         </div>
         <div class="before-after-section">
             <div class="image-container">
@@ -74,7 +72,7 @@
           }
         };
         gtag('event', 'conversion', {
-          'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+          'send_to': 'AW-826566577',
           'event_callback': callback
         });
         return false;
