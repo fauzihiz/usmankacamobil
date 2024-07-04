@@ -16,15 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-826566577"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'AW-826566577');
-    </script>
+    
 </head>
 <body>
     <header>
@@ -35,7 +27,7 @@
         <div id="hero">
             <h1>Kaca Mobil Anda Pecah atau Retak?</h1>
             <h2>Segera panggil kami ke rumah anda!</h2>
-            <a href="https://wa.link/kkz0sx" target="_blank" id="cta" onclick="gtag_report_conversion('https://wa.link/kkz0sx');"><img class="logo-wa" src="logo-wa.png" alt="logo whatsapp"><span id="cta-text">Panggil Kami!</span></a>
+            <a href="redirect.html" target="_blank" id="cta"><img class="logo-wa" src="logo-wa.png" alt="logo whatsapp"><span id="cta-text">Panggil Kami!</span></a>
             <img class="hero-img" src="hero.jpeg" alt="teknisi kaca mobil sedang memasang sealer">
         </div>
         <div id="benefit">
@@ -47,7 +39,7 @@
                 <li>Pengerjaan Cepat dan Rapih.</li>
             </ul>
             <h3>Informasi Lebih Lanjut Hubungi Kami:</h3>
-            <a href="https://wa.link/kkz0sx" target="_blank" id="cta2" onclick="gtag_report_conversion('https://wa.link/kkz0sx');"><img class="logo-wa" src="logo-wa.png" alt="logo whatsapp"><span>Silahkan Chat via Whatsapp!</span></a>
+            <a href="redirect.html" target="_blank" id="cta2"><img class="logo-wa" src="logo-wa.png" alt="logo whatsapp"><span>Silahkan Chat via Whatsapp!</span></a>
         </div>
         <div class="before-after-section">
             <div class="image-container">
@@ -65,19 +57,5 @@
         <a href="https://www.freepik.com/icon/whatsapp_1383269#fromView=keyword&page=1&position=32&uuid=757bc87c-ae28-4f94-b856-e0f8404bae76" title="wa icons">Whatsapp icons by Freepik.com</a>
     </footer>
 
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-          'send_to': 'AW-826566577',
-          'event_callback': callback
-        });
-        return false;
-      }
-    </script>
 </body>
 </html>
