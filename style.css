@@ -2,14 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F2F2F2;
+    background-color: #FFFFFF;
     text-align: center;
 }
 
 header {
     display: flex;
-    background-color: #001F3F;
-    color: #FFFFFF;
+    /*background-color: #001F3F;*/
+    background-color: #F2F2F2;
+    color: #023769;
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -22,8 +23,8 @@ header > img {
 
 #hero {
     font-family: "Oswald", sans-serif;
-    color: #001F3F;
-    background-color: #FFFFFF;
+    color: #F6B100;
+    background-color: #0EA0D3;
 }
 
 #hero > h1 {
@@ -40,8 +41,8 @@ header > img {
     justify-content: center;
     align-items: center;
     height: auto;
-    background-color: #FFD700;
-    color: #001F3F;
+    background-color: #F4B100;
+    color: #023769;
     font-family: "Roboto", sans-serif;
     font-size:larger;
     gap: 20px;
@@ -91,6 +92,6 @@ ul {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #001F3F;
-    color: #FFFFFF;
+    background-color: #0EA0D3;
+    color: #023769;
 }
