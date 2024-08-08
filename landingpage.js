@@ -41,36 +41,4 @@
             }
         });
 
-        /*
-// Add drag functionality for mouse devices
-        carousel.addEventListener('mousedown', (e) => {
-            startX = e.clientX;
-            isDragging = true;
-        });
-
-        carousel.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            let moveX = e.clientX;
-            let diffX = startX - moveX;
-
-            if (diffX > 50) {
-                moveSlide(1);
-                startX = null;
-                isDragging = false;
-            } else if (diffX < -50) {
-                moveSlide(-1);
-                startX = null;
-                isDragging = false;
-            }
-        });
-
-        carousel.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-
-        carousel.addEventListener('mouseleave', () => {
-            isDragging = false;
-        });
-    */
-       
     });
