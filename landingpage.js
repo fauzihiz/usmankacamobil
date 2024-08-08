@@ -41,6 +41,7 @@
             }
         });
 
+        /*
 // Add drag functionality for mouse devices
         carousel.addEventListener('mousedown', (e) => {
             startX = e.clientX;
@@ -70,4 +71,6 @@
         carousel.addEventListener('mouseleave', () => {
             isDragging = false;
         });
+    */
+       
     });

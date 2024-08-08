@@ -32,6 +32,12 @@
   <lastmod>2024-08-01T18:37:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+<!-- Manually added landing page -->
+<url>
+    <loc>https://usmankacamobil.netlify.app/landingpage</loc>
+    <lastmod>2024-08-01T18:37:45+00:00</lastmod>
+    <priority>0.80</priority>
+</url>
 
 
 </urlset>
