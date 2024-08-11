@@ -1,0 +1,615 @@
+/* General Styling */
+body, h1, h2, h3, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type:none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #0EA0D1;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+#img-logo {
+    height: 100px;
+    margin-right: 15px;
+}
+
+#text-logo {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+nav {
+    background-color: #E3476E;
+}
+
+#menu-toggle {
+    display: none;
+    background-color: #E3476E;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style-type:none;
+}
+
+nav li {
+    margin: 5px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #0EA0D1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #F6B205;
+}
+
+
+
+#hero {
+    display: flex;
+    align-items: center;
+    background-color: #F6B205;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Section Styling with Alternating Colors */
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#benefits {
+    background-color: #0EA0D1;
+    color: #fff;
+}
+
+#benefits > h3 {
+    color: #fff;
+}
+
+#social-proof {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Buttons */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #F6B205;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #E3476E;
+}
+
+button img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    background-color: #E3476E;
+}
+
+.cta-section > h3 {
+    color: #000;
+}
+
+/* Image and Carousel Styling */
+.split-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.split-section .text-content,
+.split-section .image-content {
+    width: 48%;
+}
+
+.split-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+    cursor: grab;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.warning-section {
+    background-color: #ffe5e5;
+    border: 1px solid red;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.warning-icon {
+    color: red;
+    margin-right: 8px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    #hero {
+        flex-direction: column;
+    }
+
+    #hero p {
+        margin: 0 0 20px 0;
+    }
+
+    .split-section {
+        flex-direction: column;
+    }
+
+    .split-section .text-content,
+    .split-section .image-content {
+        width: 100%;
+    }
+
+    footer .contact-info a {
+        font-size: 14px;
+    }
+
+    footer .contact-info img.contact-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .carousel-control {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+    #promo-header, #promo-benefits, #promo-testimonials, #scarcity-reminder {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .testimonial-carousel img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #contact-header, #contact-info {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    #gallery-header, #gallery-images {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Atur ulang grid untuk tampilan mobile */
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #0EA0D1;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0EA0D1;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #E3476E;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info img.contact-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Center Align Main Content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Promo Header Section */
+#promo-header {
+    background-color: #F6B205; /* Changed color to yellow */
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* Promo Benefits Section */
+#promo-benefits {
+    background-color: #E3476E;
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+#promo-benefits ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+#promo-benefits ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.checklist-icon {
+    color: #F6B205;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Promo Testimonials Section */
+#promo-testimonials {
+    background-color: #0EA0D1;
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.testimonial-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Scarcity Reminder Section */
+#scarcity-reminder {
+    background-color: #FFEB3B;
+    color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.warning-icon {
+    color: red;
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+#scarcity-reminder button {
+    background-color: #E3476E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scarcity-reminder button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+#scarcity-reminder button:hover {
+    background-color: #d33c5c;
+}
+
+/* Contact Page Styling */
+#contact-header {
+    background-color: #F6B205; /* Warna biru muda untuk header dan form */
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#contact-info {
+    background-color: #d33c5c; /* Warna kuning untuk informasi kontak */
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+#contact-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#contact-info ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Gallery Page Styling */
+#gallery-header {
+    background-color: #F6B205; /* Warna kuning untuk header */
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#gallery-images {
+    padding: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Atur gambar dalam grid */
+    grid-gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Efek zoom ketika gambar di-hover */
+}
+
+/* CTA Section Styling */
+#cta-gallery {
+    background-color: #E3476E; /* Warna latar belakang CTA section */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+#cta-gallery h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#cta-gallery p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#cta-gallery button {
+    background-color: #F6B205;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+#cta-gallery button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+#cta-gallery button:hover {
+    background-color: #e0a603;
+}
+
+/* Responsive Design for CTA Section */
+@media (max-width: 768px) {
+    #cta-gallery {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    #cta-gallery button {
+        font-size: 14px;
+    }
+}

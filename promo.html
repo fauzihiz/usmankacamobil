@@ -8,7 +8,7 @@
         <title>Usman Kaca Mobil - Promo</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-        <link rel="stylesheet" href="home_style.css">
+        <link rel="stylesheet" href="combined_style.css">
         
         <!-- Google Font-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,8 +51,50 @@
         </nav>
         
         <main>
-            <h1>In Maintenance</h1>
+            <!-- Promo Header Section -->
+            <section id="promo-header" class="highlight-section">
+                <h2>Promo Eksklusif untuk Area Jabodetabek!</h2>
+                <p>Jangan lewatkan kesempatan emas ini! Kami menawarkan layanan penggantian kaca mobil dengan gratis ongkos transportasi untuk area Jabodetabek. Berlaku bagi 3 customer pertama setiap harinya!</p>
+            </section>
+        
+            <!-- Promo Benefits Section -->
+            <section id="promo-benefits">
+                <h3>Kenapa Anda Harus Memilih Promo Ini?</h3>
+                <ul>
+                    <li><span class="checklist-icon">✔</span>Gratis Ongkos Transportasi untuk Jabodetabek</li>
+                    <li><span class="checklist-icon">✔</span>Hemat Biaya dan Waktu</li>
+                    <li><span class="checklist-icon">✔</span>Proses Pemasangan Cepat dan Profesional</li>
+                    <li><span class="checklist-icon">✔</span>Produk Kaca Berkualitas dengan Garansi</li>
+                </ul>
+            </section>
+        
+            <!-- Promo Testimonials Section -->
+            <section id="promo-testimonials" class="highlight-section">
+                <h3>Apa Kata Pelanggan Kami?</h3>
+                <div class="testimonial-carousel">
+                    <div class="carousel-item">
+                        <img src="testimoni/testimoni01.JPG" alt="Testimonial 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="testimoni/testimoni02.JPG" alt="Testimonial 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="testimoni/testimoni03.JPG" alt="Testimonial 3">
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Scarcity Reminder Section -->
+            <section id="scarcity-reminder">
+                <h3><span class="warning-icon">⚠️</span> Jangan Tunda Lagi! <span class="warning-icon">⚠️</span></h3>
+                <p>Promo ini bisa saja berakhir kapan saja. Segera hubungi kami sekarang juga dan pastikan Anda termasuk dalam 3 customer pertama yang mendapatkan gratis ongkos transportasi untuk penggantian kaca mobil!</p>
+                <button type="button" id="cta5" onclick="window.open('https://api.whatsapp.com/send?phone=6287718835567&amp;text=Hai%20saya%20ada%20kebutuhan%20penggantian%20kaca%20mobil%2C%20boleh%20saya%20bertanya%20lebih%20lanjut%3F', '_blank')">
+                    <img src="logo-wa.png" alt="WhatsApp Logo" class="whatsapp-icon"> Hubungi Kami Sekarang
+                </button>
+            </section>
         </main>
+        
+        
 
         <footer>
             <div class="contact-info">
@@ -69,6 +111,22 @@
                 const navList = document.getElementById('nav-list');
                 navList.classList.toggle('show');
             }
+
+            let currentIndex = 0;
+
+function showNextTestimonial() {
+    const items = document.querySelectorAll('.carousel-item');
+    items[currentIndex].style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    currentIndex = (currentIndex + 1) % items.length;
+
+    items.forEach((item, index) => {
+        item.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+}
+
+setInterval(showNextTestimonial, 3000); // Change testimonial every 3 seconds
+
         </script>
     </body>
 </html>
