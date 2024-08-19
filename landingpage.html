@@ -50,7 +50,8 @@
         <h3>Hubungi Kami Sekarang!</h3>
         <p>Jangan biarkan kaca mobil Anda mengganggu kenyamanan berkendara. Hubungi <strong>Usman Kaca Mobil</strong> untuk penggantian kaca mobil Anda. Klik tombol di bawah untuk mengatur jadwal layanan Anda.</p>
         <button type="button" id="cta" onclick="window.open('https://api.whatsapp.com/send?phone=6287718835567&amp;text=Hai%20saya%20ada%20kebutuhan%20penggantian%20kaca%20mobil%2C%20boleh%20saya%20bertanya%20lebih%20lanjut%3F', '_blank');">
-            <img src="logo-wa.png" alt="WhatsApp Logo" class="whatsapp-icon" width="512" height="512"> <b>Hubungi Kami</b>
+            <img src="logo-wa.png" alt="WhatsApp Logo" class="whatsapp-icon" width="512" height="512">
+            <b>Hubungi Kami</b>
         </button>
     </section>
 
@@ -143,6 +144,67 @@
         <a href="https://www.freepik.com/icon/whatsapp_1383269#fromView=keyword&page=1&position=32&uuid=757bc87c-ae28-4f94-b856-e0f8404bae76" title="wa icons">Whatsapp icons by Freepik.com</a>
     </footer>
 
-    <script src="landingpage.js" async></script>
+    <script>
+        //carousel
+    let currentSlide = 0;
+    let startX, isDragging = false;
+
+    function moveSlide(n) {
+        const slides = document.querySelectorAll('.carousel-slide img');
+        const totalSlides = slides.length;
+        currentSlide = (currentSlide + n + totalSlides) % totalSlides;
+        updateSlidePosition();
+    }
+
+    function updateSlidePosition() {
+        const slides = document.querySelector('.carousel-slide');
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        updateSlidePosition();
+
+        const carousel = document.querySelector('.carousel');
+
+// Add swipe functionality for touch devices
+        carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        });
+
+        carousel.addEventListener('touchmove', (e) => {
+            if (!startX) return;
+            let moveX = e.touches[0].clientX;
+            let diffX = startX - moveX;
+
+            if (diffX > 50) {
+                moveSlide(1);
+                startX = null;
+                isDragging = false;
+            } else if (diffX < -50) {
+                moveSlide(-1);
+                startX = null;
+                isDragging = false;
+            }
+        });
+
+    });
+
+    //code below to make gtm able to track a whole button
+    // Function to open WhatsApp link
+    function openWhatsApp(phone, message) {
+        window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${message}`, '_blank');
+    }
+
+    // Add event listeners to both buttons
+    document.getElementById('cta').addEventListener('click', function() {
+        openWhatsApp('6287718835567', 'Hai%20saya%20ada%20kebutuhan%20penggantian%20kaca%20mobil%2C%20boleh%20saya%20bertanya%20lebih%20lanjut%3F');
+    });
+
+    document.getElementById('cta2').addEventListener('click', function() {
+        openWhatsApp('6287718835567', 'Hai%20saya%20ada%20kebutuhan%20penggantian%20kaca%20mobil%2C%20boleh%20saya%20bertanya%20lebih%20lanjut%3F');
+    });
+
+    </script>
 </body>
 </html>
