@@ -49,10 +49,13 @@
     <section id="cta-top" class="cta-section">
         <h3>Hubungi Kami Sekarang!</h3>
         <p>Jangan biarkan kaca mobil Anda mengganggu kenyamanan berkendara. Hubungi <strong>Usman Kaca Mobil</strong> untuk penggantian kaca mobil Anda. Klik tombol di bawah untuk mengatur jadwal layanan Anda.</p>
+        <!--
         <button type="button" id="cta" onclick="window.open('https://api.whatsapp.com/send?phone=6287718835567&amp;text=Hai%20saya%20ada%20kebutuhan%20penggantian%20kaca%20mobil%2C%20boleh%20saya%20bertanya%20lebih%20lanjut%3F', '_blank');">
             <img src="logo-wa.png" alt="WhatsApp Logo" class="whatsapp-icon" width="512" height="512">
             <b>Hubungi Kami</b>
         </button>
+        -->
+        <button type="button" id="cta" class="cta-button">Hubungi Kami</button>
     </section>
 
     <!-- 3. Masalah yang Dialami oleh Market -->
@@ -118,9 +121,12 @@
     <section id="cta-bottom" class="cta-section">
         <h3>Hubungi Kami Sekarang!</h3>
         <p>Jangan biarkan kaca mobil Anda mengganggu kenyamanan berkendara. Hubungi <strong>Usman Kaca Mobil</strong> untuk penggantian kaca mobil Anda. Klik tombol di bawah untuk mengatur jadwal layanan Anda.</p>
+        <!--
         <button type="button" id="cta2" onclick="window.open('https://api.whatsapp.com/send?phone=6287718835567&amp;text=Hai%20saya%20ada%20kebutuhan%20penggantian%20kaca%20mobil%2C%20boleh%20saya%20bertanya%20lebih%20lanjut%3F', '_blank');">
             <img src="logo-wa.png" alt="WhatsApp Logo" class="whatsapp-icon" width="512" height="512"> <b>Hubungi Kami</b>
         </button>
+        -->
+        <button type="button" id="cta2" class="cta-button">Hubungi Kami</button>
     </section>
 
     <!-- 9. Scarcity -->
@@ -190,21 +196,14 @@
 
     });
 
-    //code below to make gtm able to track a whole button
-    // Function to open WhatsApp link
-    function openWhatsApp(phone, message) {
-        window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${message}`, '_blank');
-    }
-
-    // Add event listeners to both buttons
+    // Add event listeners to both cta buttons
     document.getElementById('cta').addEventListener('click', function() {
-        openWhatsApp('6287718835567', 'Hai%20saya%20ada%20kebutuhan%20penggantian%20kaca%20mobil%2C%20boleh%20saya%20bertanya%20lebih%20lanjut%3F');
+        window.open('https://api.whatsapp.com/send?phone=6287718835567&amp;text=Hai%20saya%20ada%20kebutuhan%20penggantian%20kaca%20mobil%2C%20boleh%20saya%20bertanya%20lebih%20lanjut%3F', '_blank');
     });
 
     document.getElementById('cta2').addEventListener('click', function() {
-        openWhatsApp('6287718835567', 'Hai%20saya%20ada%20kebutuhan%20penggantian%20kaca%20mobil%2C%20boleh%20saya%20bertanya%20lebih%20lanjut%3F');
+        window.open('https://api.whatsapp.com/send?phone=6287718835567&amp;text=Hai%20saya%20ada%20kebutuhan%20penggantian%20kaca%20mobil%2C%20boleh%20saya%20bertanya%20lebih%20lanjut%3F', '_blank');
     });
-
     </script>
 </body>
 </html>
